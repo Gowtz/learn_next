@@ -1,0 +1,24 @@
+
+> @ dev /home/gowtham/space/Learning/nextjs-dashboard
+> next dev
+
+  ▲ Next.js 15.0.0-canary.56
+  - Local:        http://localhost:6969
+  - Environments: .env
+  - Experiments (use with caution):
+    · ppr
+
+ ✓ Starting...
+ ✓ Ready in 1740ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1505ms (634 modules)
+ ✓ Compiled in 326ms (289 modules)
+ ✓ Compiled /dashboard/invoices in 323ms (636 modules)
+ GET /dashboard/invoices 200 in 403ms
+ ✓ Compiled /dashboard/customers in 165ms (638 modules)
+ GET /dashboard/customers 200 in 206ms
+ GET /dashboard/customers 200 in 134ms
+ GET /dashboard 200 in 4096ms
+ GET /dashboard 200 in 568ms
+ GET /dashboard/invoices 200 in 12ms
+[?25h

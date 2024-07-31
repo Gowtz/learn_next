@@ -9,6 +9,7 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+
 export async function fetchRevenue() {
   try {
     // Artificially delay a response for demo purposes.
@@ -30,12 +31,15 @@ export async function fetchRevenue() {
 
 export async function fetchLatestInvoices() {
   try {
+    // console.log("ME")
+    // await new Promise(resolve => setTimeout(resolve,5000))
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
       ORDER BY invoices.date DESC
       LIMIT 5`;
+      // console.log('Data fetch completed after 5 seconds.');
 
     const latestInvoices = data.rows.map((invoice) => ({
       ...invoice,
@@ -83,7 +87,7 @@ export async function fetchCardData() {
   }
 }
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 10;
 export async function fetchFilteredInvoices(
   query: string,
   currentPage: number,
