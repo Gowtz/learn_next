@@ -5,6 +5,8 @@ export const metadata: Metadata = {
 export default function page() {
   
   return (
-    <div>Customer</div>
+  <>
+  <h1>Customer will be displayed soon Here</h1>
+  </>
   )
 }

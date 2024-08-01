@@ -1,7 +1,6 @@
 import RevenueChart from "@/app/ui/dashboard/revenue-chart";
 import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
 import { lusitana } from "@/app/ui/fonts";
-import { fetchLatestInvoices, fetchCardData } from "@/app/lib/data";
 import { Suspense } from "react";
 import {
   CardSkeleton,
@@ -16,14 +15,7 @@ export const metadata: Metadata = {
  
 
 export default async function Page() {
-  // const revenue = await fetchRevenue()
-  const latestInvoices = await fetchLatestInvoices();
-  const {
-    totalPaidInvoices,
-    totalPendingInvoices,
-    numberOfCustomers,
-    numberOfInvoices,
-  } = await fetchCardData();
+
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
